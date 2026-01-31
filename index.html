@@ -71,8 +71,10 @@
   </div>
 <script>
   const noButton = document.getElementById("no");
+  const yesButton = document.getElementById("yes");
   const card = document.querySelector(".card");
 
+  // Uciekające "Nie"
   noButton.addEventListener("mouseover", () => {
     const cardRect = card.getBoundingClientRect();
     const btnRect = noButton.getBoundingClientRect();
@@ -85,6 +87,15 @@
 
     noButton.style.left = x + "px";
     noButton.style.top = y + "px";
+  });
+
+  // Kliknięcie "Tak"
+  yesButton.addEventListener("click", () => {
+    card.innerHTML = `
+      <h1 style="font-size: 32px; color: #ff69b4;">
+        grzeczna dziewczynka 💖
+      </h1>
+    `;
   });
 </script>
 
